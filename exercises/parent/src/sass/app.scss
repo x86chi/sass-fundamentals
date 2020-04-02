@@ -4,8 +4,21 @@
   margin: auto;
   background: #eee;
 
+  &.right-nav {
+    .main {
+      margin-left: 0;
+      margin-right: 220px;
+    }
+
+    .sidebar {
+      float: right;
+    }
+  }
+
   .sidebar,
-  .main { padding: 10px; }
+  .main {
+    padding: 10px;
+  }
 
   .main {
     margin-left: 220px;
