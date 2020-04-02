@@ -4,6 +4,7 @@
 .btn {
   padding: 2px 10px;
   border: 1px solid transparent;
+  color: black;
   border-radius: 2px;
   &:hover:not(:disabled) {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
