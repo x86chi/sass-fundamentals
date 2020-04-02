@@ -1,6 +1,67 @@
 @import '_variables';
 @import '_mixins';
 
-input[type="range"] {
-  // Add your styles here
+input[type='range'] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    &::-webkit-slider-runnable-track {
+      background: #367ebd;
+    }
+    &::-ms-fill-lower {
+      background: #3071a9;
+    }
+    &::-ms-fill-upper {
+      background: #367ebd;
+    }
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -14px;
+  }
+
+  &::-moz-range-thumb,
+  &::-ms-thumb,
+  &::-webkit-slider-thumb {
+    @include range-thumb();
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include range-track();
+    box-shadow: $range-shadow;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: $range-small-border;
+  }
+  &::-moz-range-track {
+    @include range-track();
+
+    box-shadow: $range-shadow;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: $range-small-border;
+  }
+  &::-ms-track {
+    @include range-track();
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  &::-ms-fill-lower {
+    background: #2a6495;
+    border: $range-small-border;
+    border-radius: $range-border-radius;
+    box-shadow: $range-shadow;
+  }
+  &::-ms-fill-upper {
+    background: #3071a9;
+    border: $range-small-border;
+    border-radius: $range-border-radius;
+    box-shadow: $range-shadow;
+  }
 }
